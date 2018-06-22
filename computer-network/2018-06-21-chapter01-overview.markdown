@@ -152,7 +152,11 @@
 
   体系结构是指计算机网络的各层及其协议的集合，换言之，计算机网络的体系结构就是这个计算机网络及其构建所应完成的功能的精确定义。这些功能究竟是用何种硬件或软件来完成，则是一种遵循这种体系结构的实现。总之，体系结构是抽象的，实现是具体的。
 
-![计算机体系结构](https://github.com/zeanzai/Computer-Science-Study-Note/computer-network/image/1-18 计算机网络体系结构.png)
+![计算机体系结构](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/image/1-18-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png)
+
+
+
+
 
 
 
