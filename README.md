@@ -24,3 +24,8 @@
 - [chapter09 无线网络和移动网络](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter09-wifi-wireless.markdown)  
   无线局域网的组成、协议、地址，移动用户保持IP不变、蜂窝对移动用户的路由选择问题
 
+## 运维手册
+
+- [centos7上安装Nginx1.12并配置HTTPS](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-nginx-and-config-https.md)
+- 
+
