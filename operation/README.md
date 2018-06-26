@@ -15,8 +15,8 @@
 - 在`/opt/package/`目录下面上传安装包
 - 在`/usr/setup/`目录下面安装软件
 - 每次对服务器进行修改时，都会创建后缀名为md的相对应的维护日志文件
-- 在`/home/log/`目录下面放置维护日志文件
-- 在`/home/history/`目录下面备份history命令
+- 在`/home/log/`目录下面放置维护日志文件，以日期（yyyyMMdd）+操作名称（eg: install-nginx.md）命名
+- 在`/home/history/`目录下面备份history命令，以日期（yyyyMMdd）命名
 - 安装依赖时，会优先使用yum install方式进行安装，在yum库中没有的相关依赖时才会使用源码形式安装
 - 创建非root管理员进行操作
 
