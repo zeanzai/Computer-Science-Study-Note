@@ -58,15 +58,15 @@ add 2 servers to 'nginx.conf' file
 ```shell
 server {  
     listen  80;  
-    server_name sys.beidiancloud.com;   
+    server_name your.doamain.name;   
     rewrite ^(.*)$  https:#$host$1 permanent;  
 } 
 server {
      listen       443 ssl;
-     server_name  sys.beidiancloud.com;
+     server_name  your.doamain.name;
 
-     ssl_certificate      cert/sys/sys.beidiancloud.com_ca.crt;
-     ssl_certificate_key  cert/sys/sys.beidiancloud.com.key;
+     ssl_certificate      cert/sys/your.doamain.name_ca.crt;
+     ssl_certificate_key  cert/sys/your.doamain.name.key;
      ssl_session_cache    shared:SSL:1m;
      ssl_session_timeout  5m;       
      ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -87,7 +87,7 @@ reload nginx
 ```shell
 $ ./usr/setup/nginx/sbin/nginx -s reload
 ```
-open brower and type 'sys.beidiancloud.com' and enter to test the websites
+open brower and type 'your.doamain.name' and enter to test the websites
 
 # 7. config autorun 
 ## 7.1 create config service file
@@ -119,7 +119,7 @@ reboot
 ```shell
 $ reboot
 ```
-open brower and type 'sys.beidiancloud.com' and enter to test the websites
+open brower and type 'your.doamain.name' and enter to test the websites
 
 
 # 8. other run orders
