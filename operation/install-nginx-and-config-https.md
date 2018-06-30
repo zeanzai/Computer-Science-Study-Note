@@ -110,6 +110,7 @@ WantedBy=multi-user.target
 ```
 
 ## 7.2. enable config file
+enable nginx autorun after booting operate system
 ```shell
 $ systemctl enable nginx.service
 ```
