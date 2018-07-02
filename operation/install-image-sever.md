@@ -107,10 +107,9 @@ $ firewall-cmd --zone= public --remove-port=80/tcp --permanent
 ```
 # reference
 > 1. CentOS7 安装vsftpd 服务器 https://blog.csdn.net/uq_jin/article/details/51684722
-> 2. 
-Centos7,配置防火墙，开启端口 https://blog.csdn.net/u013410747/article/details/61696178
+> 2. Centos7,配置防火墙，开启端口 https://blog.csdn.net/u013410747/article/details/61696178
 > 3. SELinux百度百科： https://baike.baidu.com/item/SELinux/8865268?fr=aladdin
 > 4. 【Linux/CentOS】Boolean ftp_home_dir is not defined https://www.cnblogs.com/guxin/p/centos-boolean-ftp-home-dir-is-not-defined.html
-> 
+
 
 
