@@ -27,5 +27,5 @@
 ## [运维手册](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/README.md)
 
 - [centos7上安装Nginx1.12并配置HTTPS](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-nginx-and-config-https.md)
-- 
+- [centos7上安装图片服务器（vsftp+nginx）](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-image-sever.md)
 
