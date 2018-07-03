@@ -24,6 +24,31 @@
 - [chapter09 无线网络和移动网络](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter09-wifi-wireless.markdown)  
   无线局域网的组成、协议、地址，移动用户保持IP不变、蜂窝对移动用户的路由选择问题
 
+## 《Linux就该这么学（第一版）-刘遄》
+
+- [chapter01 部署虚拟环境安装Linux系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chatper01.markdown)
+- [chapter02 新手必须掌握的Linux命令](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chatper02.markdown)
+- [chapter03 管道符、重定向与环境变量](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter03.markdown)
+- [chapter04 vim编辑器与shell命令脚本](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter04.markdown)
+- [chapter05 用户身份与文件权限](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter05.markdown)
+- [chapter06 存储结构与磁盘划分](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter06.markdown)
+- [chapter07 使用RAID与LVM磁盘阵列技术](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter07.markdown)
+- [chapter08 iptables与firewalld防火墙](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter08.markdown)
+- [chapter09 使用ssh服务管理远程主机](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter09.markdown)
+- [chapter10 使用Apache服务部署静态网站](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter10.markdown)
+- [chapter11 使用vsftpd服务传输文件](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter11.markdown)
+- [chapter12 使用Samba或NFS实现文件共享](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter12.markdown)
+- [chapter13 使用BIND提供域名解析服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter13.markdown)
+- [chapter14 使用DHCP动态管理主机地址](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter14.markdown)
+- [chapter15 使用Postfix与Dovecot部署邮件系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter15.markdown)
+- [chapter16 使用Squid部署代理缓存服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter16.markdown)
+- [chapter17 使用iSCSI服务部署网络存储](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter17.markdown)
+- [chapter18 使用MariaDB数据库管理系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter18.markdown)
+- [chapter19 使用PXE+KIC和start无人值守安装服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter19.markdown)
+- [chapter20 使用LNMP架构部署动态网站环境](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter20.markdown)
+
+
+
 ## [运维手册](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/README.md)
 
 - [centos7上安装Nginx1.12并配置HTTPS](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-nginx-and-config-https.md)
