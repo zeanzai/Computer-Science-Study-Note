@@ -26,8 +26,8 @@
 
 ## 《Linux就该这么学（第一版）-刘遄》
 
-- [chapter01 部署虚拟环境安装Linux系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chatper01.markdown)
-- [chapter02 新手必须掌握的Linux命令](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chatper02.markdown)
+- [chapter01 部署虚拟环境安装Linux系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter01.markdown)
+- [chapter02 新手必须掌握的Linux命令](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter02.markdown)
 - [chapter03 管道符、重定向与环境变量](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter03.markdown)
 - [chapter04 vim编辑器与shell命令脚本](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter04.markdown)
 - [chapter05 用户身份与文件权限](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter05.markdown)
