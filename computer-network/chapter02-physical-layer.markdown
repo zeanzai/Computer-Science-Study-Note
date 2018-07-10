@@ -208,9 +208,88 @@
 
   ADSL所能得到的最高数据传输速率还与实际的用户线上的信噪比有关。
 
+  **（需要补充ADSL的布线模型）**
+
+  第二代ADSL改进的地方：
+
+  - 提高了调制效率得到了更高的数据率
+  - 采用了无缝速率自适应技术SRA
+  - 改善了线路质量评测和故障定位功能
+
+  **（需要补充xDSL，龙国柱博士制定的标准）**
+
+- 光纤同轴混合网（HFC网）
+
+  - 定义
+
+  光纤同轴混合网（HFC，Hybrid fiber coax）是目前覆盖面很广的有线电视网的基础上开发的一种居民宽带接入网，可传送电视节目、提供电话、数据和其他宽带交互型业务。
+
+  - 模型
+
+  HFC网把原有线电视网中的同轴电缆主干部分换成光纤，光纤从头端连接到光纤结点。在光纤结点处光信号转化为电信号，然后通过同轴电缆传输到用户家中。
+  ![](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/image/2-23.png)
+
+  - 特点
+
+    连接一个光纤结点的典型用户为500，不超过2000
+
+    光纤结点到头端的典型距离为25km，光纤结点到用户的距离不超过2到3km
+
+    具有双向传输功能
+
+  - 频带划分
+
+    ![](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/image/2-24.png)
+
+  - 设备
+
+    机顶盒：连接到同轴电缆和用户电视机之间的，将数字信号转化为模拟信号的装备。
+
+    电缆调制解调器（cable modem）：只需要安装在用户端，完成解决共享信道可能出现冲突问题等复杂问题的设备。
+
+  - 其他
+
+    使用ADSL调制解调器时，用户计算机所连接的电话用户线是该用户专享的，也就是说ADSL用户线上所能达到的最高数据率是确定的，与其他ADSL是否在上网无关。
+
+    HFC的电缆调制解调器，在同轴电缆这一段用户所享用的最高数据率是不确定的。因此某个用户所能达到的最高数据率是不确定的，取决于这段电缆上现在有多少个用户正在传输数据。若出现大量的用户，那么每个用户实际的上网速率可能会低到难以忍受的程度。
+
+- FTTx技术
+
+  - 定义
+
+    FTTx（fiber to the x），是指ISP把光纤一直铺设到x（C，curb，光纤到路边FTTC；Z，zone，光纤到小区FTTZ；B，building，光纤到大楼FTTB；F，floor，光纤到楼层FTTF；O，office，光纤到办公室FTTO；D，desk，光纤到桌面）。
+
+  - 模型
+
+    主干线使用光纤传输。
+
+    光纤干线和广大用户之间则使用一段中间转换装置（光配线网ODN，optical distribution network），使得数十个家庭用户能够共享一根光纤干线。常用的是无源光网络PON（passive optical network）。
+
+    ![](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/image/2-25.png)
+
+    无源光网络PON种类很多，当下最流行的有两种：
+
+    - 以太网无源光网络（EPON， Ethernet PON），在链路层使用以太网协议，利用PON拓扑结构实现以太网接入，具有兼容性好、成本低、扩展性好、管理方便的有点。
+    - 吉比特无源光网络（GPON，Gigabit PON），采用通用封装方法GEM（generic encapsulation method），可承载多业务，对各种业务类型都能够提供服务质量保证，是很有潜力的宽带光纤接入技术。
+
+  - 设备
+
+    - OLT（optical line terminal）：光线路终端，连接到光纤干线的终端设备。主要作用是
+      - 把收到的下行数据发往无源的1：N光分路器（splitter）；
+      - 接受由1：N光分路器（splitter）发来的数据；
+    - 1：N光分路器（splitter）：下行数据时使用广播的形式传递数据给ONU，上行数据时将ONU传过来的数据进行汇总，并使用TDMA（时分多址）方式发往OLT，典型的是1:32
+    - ONU（optical network unit）：光网络单元。具有特有的标识，只接受发送给自己的数据。负责在上行数据时将电信号转化为光信号，下行数据时将光信号转化为电信号。
+
   
 
   
+
+
+
+
+
+
+
 
 
 
