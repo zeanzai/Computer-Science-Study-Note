@@ -5,25 +5,16 @@
 
 ### 《计算机网络（第7版）-谢希仁》
 
-- [chapter01 概述](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter01-overview.markdown)  
+- [chapter01 概述](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter01-overview.markdown)
+- [chapter02 物理层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter02-physical-layer.markdown)
+- [chapter03 数据链路层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter03-data-link-layer.markdown)
+- [chapter04 网络层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter04-network-layer.markdown)
+- [chapter05 运输层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter05-transport-layer.markdown)
+- [chapter06 应用层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter06-application-layer.markdown)
+- [chapter07 网络安全](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter07-network-security.markdown)
+- [chapter08 互联网上的音频/视频服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter08-vedio.markdown)
+- [chapter09 无线网络和移动网络](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter09-wifi-wireless.markdown)
 
-- [chapter02 物理层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter02-physical-layer.markdown)  
-
-- [chapter03 数据链路层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter03-data-link-layer.markdown)  
-
-- [chapter04 网络层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter04-network-layer.markdown)  
-
-- [chapter05 运输层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter05-transport-layer.markdown)  
-
-- [chapter06 应用层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter06-application-layer.markdown)  
-
-- [chapter07 网络安全](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter07-network-security.markdown)  
-
-- [chapter08 互联网上的音频/视频服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter08-vedio.markdown)  
-
-- [chapter09 无线网络和移动网络](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter09-wifi-wireless.markdown)  
-
-  
 
 ## 《Linux就该这么学（第一版）-刘遄》
 
