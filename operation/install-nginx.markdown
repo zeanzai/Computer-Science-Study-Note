@@ -86,20 +86,14 @@ $ ./nginx
 
 // 关闭
 第一种方式 查找相关进程，然后kill进程
-第二种方式 ./nginx stop
-第三种方式 ./nginx quit
-$ ./
-
+第二种方式 ./nginx -s stop
+第三种方式 ./nginx -s quit
 
 ```
 
+## 测试
 
-
-# 测试
-
-
-
-
+在浏览器中输入服务器地址，出现Nginx欢迎界面即为测试成功！
 
 
 
@@ -125,8 +119,6 @@ WantedBy=multi-user.target
 
 ```
 
-
-
 ## 将服务文件添加到开机自启进程
 
 ```shell
@@ -135,17 +127,30 @@ $ systemctl enable nginx.service
 
 
 
+# 关于centos7的系统服务命令
 
+```shell
+$ systemctl start nginx.service
+$ systemctl enable nginx.service
+$ systemctl disable nginx.service
+$ systemctl status nginx.service
+$ systemctl restart nginx.service
+```
 
 # 填坑
 
 - 启动Nginx后，不能够打开测试网页
 
-  检查系统进程
+  解决方案：
 
-  检查安全组 -> 检查端口开放情况
+   	1. 检查系统进程，是否开启了Nginx
+  		2. 检查安全组 -> 检查端口开放情况
 
-  
+- 运行`systemctl enable nginx.service  `出现`Failed to execute operation: Bad message`错误
+
+  解决方案：检查创建的服务文件是否正确书写。
+
+
 
 
 
