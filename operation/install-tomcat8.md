@@ -97,4 +97,11 @@ yum install rng-tools
 systemctl start rngd
 systemctl restart rngd
 
+参考地址：https://linuxize.com/post/how-to-install-tomcat-8-5-on-centos-7/
+
+https://stackoverflow.com/questions/38551166/403-access-denied-on-tomcat-8-manager-app-without-prompting-for-user-password
+
+https://stackoverflow.com/questions/32230962/mvn-tomcat7deploy-cannot-invoke-tomcat-manager-broken-pipe/32317221#32317221
+
+
 
