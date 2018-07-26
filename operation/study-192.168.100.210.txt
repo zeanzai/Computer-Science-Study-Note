@@ -1,42 +1,42 @@
-1. ipï¼š192.168.100.210
-2. rootï¼šroot1003
-3. åŒ…æ”¾ç½®åœ°å€ï¼š/opt/package
-4. è½¯ä»¶å®‰è£…åœ°å€ï¼š /usr/setup
-5. å®‰è£…jdk1.8.0_111
-- è§£å‹ 
+1. ip£º192.168.100.210
+2. root£ºroot1003
+3. °ü·ÅÖÃµØÖ·£º/opt/package
+4. Èí¼ş°²×°µØÖ·£º /usr/setup
+5. °²×°jdk1.8.0_111
+- ½âÑ¹ 
 	tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup
-- è®¾ç½®ç¯å¢ƒå˜é‡
-	vi /etc/profile æ·»åŠ ä»¥ä¸‹å†…å®¹ï¼š
+- ÉèÖÃ»·¾³±äÁ¿
+	vi /etc/profile Ìí¼ÓÒÔÏÂÄÚÈİ£º
 	export JAVA_HOME=/usr/setup/jdk1.8.0_111
 	export JRE_HOME=$JAVA_HOME/jre
 	export CLASSPATH=./:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
 	export PATH=$PATH:$JAVA_HOME/bin
 
-- ä½¿ç¯å¢ƒå˜é‡ç”Ÿæ•ˆ
+- Ê¹»·¾³±äÁ¿ÉúĞ§
 	source /etc/profile
 
-- é‡å¯
+- ÖØÆô
 	reboot
 
-6. å®‰è£…Tomcat8.5 
-- è§£å‹æ–‡ä»¶
+6. °²×°Tomcat8.5 
+- ½âÑ¹ÎÄ¼ş
 	$ tar zxf apache-tomcat-8.5.32.tar.gz -C /usr/setup/
 
-- åˆ›å»ºç”¨æˆ·ï¼Œå¹¶å°†homeç›®å½•æ”¾ç½®åˆ°å®‰è£…ç›®å½•ä¸‹é¢
+- ´´½¨ÓÃ»§£¬²¢½«homeÄ¿Â¼·ÅÖÃµ½°²×°Ä¿Â¼ÏÂÃæ
 	useradd -m -U -d /usr/setup/apache-tomcat-8.5.32 -s /bin/false tomcat
 
-- åˆ›å»ºå¿«æ·æ–¹å¼
+- ´´½¨¿ì½İ·½Ê½
 	ln -s /usr/setup/apache-tomcat-* /usr/setup/latestTomcat
 
-- æ”¹å˜æ–‡ä»¶æ‰€å±ç»„å’Œç”¨æˆ·ä¸ºTomcat
+- ¸Ä±äÎÄ¼şËùÊô×éºÍÓÃ»§ÎªTomcat
 	chown -R tomcat: /usr/setup/apache-tomcat-*
 	chown -R tomcat: /usr/setup/latestTomcat
 
-- å¯æ‰§è¡ŒçŠ¶æ€
+- ¿ÉÖ´ĞĞ×´Ì¬
 	chmod +x /usr/setup/latestTomcat/bin/*.sh
 
-- åˆ›å»º/etc/systemd/system/tomcat.serviceæ–‡ä»¶	
-	```æ·»åŠ ä»¥ä¸‹å†…å®¹
+- ´´½¨/etc/systemd/system/tomcat.serviceÎÄ¼ş	
+	```Ìí¼ÓÒÔÏÂÄÚÈİ
 	[Unit]
 	Description=Tomcat 8.5 servlet container
 	After=network.target
@@ -60,41 +60,81 @@
 	WantedBy=multi-user.target
 	```
 
-- è®©åˆ›å»ºçš„æœåŠ¡ç”Ÿæ•ˆï¼Œç„¶åå¯åŠ¨Tomcat
+- ÈÃ´´½¨µÄ·şÎñÉúĞ§£¬È»ºóÆô¶¯Tomcat
 	systemctl daemon-reload
 	systemctl start tomcat
 	systemctl status tomcat
 
-- åŠ å…¥ automatically started at boot time
+- ¼ÓÈë automatically started at boot time
 	systemctl enable tomcat
 
-- å¼€æ”¾ç«¯å£
+- ¿ª·Å¶Ë¿Ú
 	firewall-cmd --zone=public --permanent --add-port=8080/tcp
+	firewall-cmd --zone=public --permanent --add-port=8005/tcp
+	firewall-cmd --zone=public --permanent --add-port=8009/tcp
 	firewall-cmd --reload
 
-- ä¿®æ”¹é…ç½®æ–‡ä»¶
+- ĞŞ¸ÄÅäÖÃÎÄ¼ş
 	a. vi /usr/setup/latestTomcat/conf/tomcat-users.xml
-	```æ·»åŠ ä»¥ä¸‹å†…å®¹
+	```Ìí¼ÓÒÔÏÂÄÚÈİ
 	<role rolename="manager-script"/>	
 	<user username="tomcat" password="tomcat" roles="manager-script"/>
 	```
 	b. vi /usr/setup/latestTomcat/webapps/manager/META-INF/context.xml
 <Context antiResourceLocking="false" privileged="true" >
-	<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> --> æŠŠè¿™ä¸€è¡Œæ³¨é‡Šæ‰
+	<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> --> °ÑÕâÒ»ĞĞ×¢ÊÍµô
 	<Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
 </Context>
 
 
 
+```
 
-æ³¨æ„ï¼šTomcatå¯åŠ¨æ…¢çš„è§£å†³åŠæ³•
-ç¬¬ä¸€ç§ :
-é€šè¿‡ä¿®æ”¹Tomcatå¯åŠ¨æ–‡ä»¶ -Djava.security.egd=file:/dev/urandom é€šè¿‡ä¿®æ”¹JREä¸­çš„java.securityæ–‡ä»¶ securerandom.source=file:/dev/urandom
+1. ²Î¿¼£º https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-tomcat8.md
+2. TomcatÆô¶¯ÂıµÄ½â¾ö°ì·¨
+µÚÒ»ÖÖ :
+Í¨¹ıĞŞ¸ÄTomcatÆô¶¯ÎÄ¼ş -Djava.security.egd=file:/dev/urandom Í¨¹ıĞŞ¸ÄJREÖĞµÄjava.securityÎÄ¼ş securerandom.source=file:/dev/urandom
 
-ç¬¬äºŒç§(æ¨è):
-yum install rng-tools
-##å¯åŠ¨ç†µæœåŠ¡
+µÚ¶şÖÖ(ÍÆ¼ö):
+yum -y install rng-tools
+##Æô¶¯ìØ·şÎñ
 systemctl start rngd
 systemctl restart rngd
+
+```
+7. °²×°redis4.0.6
+- ¼ì²é±àÒë¹¤¾ßÊÇ·ñ°²×°
+	rpm -qa | grep gcc-c++
+	Èç¹ûÃ»ÓĞ°²×°£¬Ö´ĞĞ£º yum -y install gcc-c++
+- ½âÑ¹
+	tar zxf redis-4.0.6.tar.gz
+- ½øÈë°²×°Ä¿Â¼£¬²¢½øĞĞ±àÒë
+	make
+- ´´½¨°²×°Ä¿Â¼
+	mkdir /usr/setup/redis4.0.6_singleton
+- °²×°
+	make install PREFIX=/usr/setup/redis4.0.6_singleton
+- ²âÊÔ
+	- ½øÈë°²×°Ä¿Â¼£¬Æô¶¯·şÎñ¶Ë
+		cd /usr/setup/redis4.0.6_singleton/bin
+		./redis-server
+	- ¿ªÆôÁíÒ»¸öÖÕ¶Ë£¬½øÈë°²×°Ä¿Â¼£¬Æô¶¯¿Í»§¶Ë
+		cd /usr/setup/redis4.0.6_singleton/bin
+		./redis-cli
+
+
+
+
+
+```
+1. ²Î¿¼: https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-redis-cluster.md
+2. »ù±¾ÃüÁî
+ping
+set a 123
+get a
+quit
+```
+
+
 
 
