@@ -1,3 +1,5 @@
+
+
 1. ip：192.168.100.210
 2. root：root1003
 3. 包放置地址：/opt/package
@@ -58,7 +60,7 @@
   
   [Install]
   WantedBy=multi-user.target
-  ```
+```
 
 - 让创建的服务生效，然后启动Tomcat
   systemctl daemon-reload
@@ -105,3 +107,5 @@ https://stackoverflow.com/questions/32230962/mvn-tomcat7deploy-cannot-invoke-tom
 
 
 
+
+```

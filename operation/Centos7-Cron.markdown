@@ -130,9 +130,7 @@ rm -rf ./$(date +'%Y-%m-%d' -d '-1 days')
 $ ./etc/scripts/tar.sh
 $ crontab -e
 # 每天00:01打包昨天的日志文件到tar目录中，并删除昨天的日志文件，要求打包文件以日期命名
-* * * * * /bin/sh /etc/scripts/tar.sh >/home/logs/tar/tar.log 2>&1
-
-
+* * * * * /bin/sh /etc/scripts/tar.sh
 ```
 
 
