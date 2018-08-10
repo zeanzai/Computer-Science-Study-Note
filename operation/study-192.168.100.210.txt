@@ -102,7 +102,7 @@ systemctl start rngd
 systemctl restart rngd
 
 ```
-7. 安装redis4.0.6
+7. 安装redis4.0.6【没有设置自启动】
 - 检查编译工具是否安装
 	rpm -qa | grep gcc-c++
 	如果没有安装，执行： yum -y install gcc-c++
@@ -122,10 +122,6 @@ systemctl restart rngd
 		cd /usr/setup/redis4.0.6_singleton/bin
 		./redis-cli
 
-
-
-
-
 ```
 1. 参考: https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-redis-cluster.md
 2. 基本命令
@@ -134,6 +130,162 @@ set a 123
 get a
 quit
 ```
+
+8. 安装MySQL5.7
+- 检查安装环境
+	rpm -qa|grep mariadb
+	rpm -e mariadb-libs-* --nodeps 
+	rpm -qa|grep mariadb
+- 解压
+	tar xvf mysql-5.7.16-1.el7.x86_64.rpm-bundle.tar
+	mkdir mysql5.7.16 
+	mv mysql-community-* ./mysql5.7.16/
+
+- 安装
+	rpm -ivh mysql-community-common-5.7.16-1.el7.x86_64.rpm 
+	rpm -ivh mysql-community-libs-5.7.16-1.el7.x86_64.rpm  
+	rpm -ivh mysql-community-client-5.7.16-1.el7.x86_64.rpm 
+	rpm -ivh mysql-community-server-5.7.16-1.el7.x86_64.rpm  
+
+- 初始化
+	mysqld --initialize --user=mysql
+	cat /var/log/mysqld.log   
+	systemctl status mysqld  
+	systemctl start mysqld
+	systemctl status mysqld
+
+- 分配权限
+	mysql -uroot -p
+	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root1003@study&*(';
+
+	grant all on *.* to 'root'@'%' identified by 'root1003@study&*(';
+	flush privileges;
+
+- 开放端口
+	firewall-cmd --zone=public --add-port=3306/tcp --permanent
+	firewall-cmd --reload
+```
+参考：
+https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-mysql.md
+```
+
+9. 安装git、jekyll
+- 查看yum库中的版本：
+	yum info git
+- 查看是否安装
+	git --version
+- 安装依赖包
+	yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+- 查看是否安装
+	git --version
+- 卸载旧版本
+	yum remove git
+- 下载 https://github.com/git/git/releases
+- 上传到制定目录
+- 解压
+	tar zxf git-2.18.0.tar.gz
+- 安装
+	make prefix=/usr/setup/git_2.18.0 all
+	make prefix=/usr/setup/git_2.18.0 install
+- 配置环境变量
+	vi /etc/profile
+	export GIT_HOME=/usr/setup/git_2.18.0
+	export PATH=$PATH:$GIT_HOME/bin
+	source /etc/profile
+- 查看是否安装
+	git --version
+- 配置
+	git config --global user.name "zeanzai"
+	git config --global user.email "438123371@qq.com"
+
+----------- 安装jekyll
+- 检查ruby是否安装
+	ruby -v
+- 更新安装源
+	yum -y update 
+- 安装RVM
+	gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB 
+	curl -sSL https://get.rvm.io | bash -s stable // 此步骤时间有点长
+	source /etc/profile.d/rvm.sh
+	rvm -v
+		输出：rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+- 安装最新的稳定版本
+	rvm install ruby // 此步骤时间有点长
+- 测试是否安装
+	ruby -v
+		输出：ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+	gem -v
+		输出：2.7.7
+
+- 安装jekyll和bundle
+	gem install jekyll bundle jekyll-paginate
+- 测试jekyll是否安装
+	bundle -v
+		输出： Bundler version 1.16.2
+	jekyll -v
+		输出： jekyll 3.8.3
+- 创建目录
+	mkdir /home/resource/open
+- 克隆项目
+	git clone https://github.com/zeanzai/zeanzai.github.io.git
+- 配置Nginx
+	
+- 创建脚本
+mkdir /opt/script
+cd /opt/script
+vi jekyll.sh
+#!/bin/sh
+. /etc/profile
+. ~/.bash_profile
+echo 'start-----------------------------------------------' 
+date "+%Y-%m-%d %H:%M:%S"
+
+echo 'open the dir...'
+cd /home/resource/open/zeanzai.github.io
+
+echo 'excute git pull...'
+git pull
+
+echo 'excute jekyll build...'
+jekyll build
+
+echo 'reload nginx...'
+systemctl reload nginx
+
+echo 'end -----------------------------------------------'
+
+chmod +x jekyll.sh
+
+- 查看定时器是否启动
+systemctl status crond
+
+- 查看定时器是否开机自启
+systemctl is-enabled crond
+
+- 设置定时器
+crontab -e
+40 12 * * * /bin/sh /opt/script/jekyll.sh >> /home/jekyll.log 2>&1
+
+- 查看执行日志
+tail -f /var/log/cron
+
+
+date "+%Y-%m-%d %H:%M:%S"
+
+
+
+/usr/local/rvm/gems/ruby-2.5.1/bin:
+/usr/local/rvm/gems/ruby-2.5.1@global/bin:
+/usr/local/rvm/rubies/ruby-2.5.1/bin:
+/usr/local/sbin:
+/usr/local/bin:
+/usr/sbin:
+/usr/bin:
+/usr/local/rvm/bin:
+/usr/setup/git_2.18.0/bin:
+/root/bin
+
+source /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/environment
 
 
 
