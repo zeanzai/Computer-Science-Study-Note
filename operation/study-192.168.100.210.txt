@@ -1,42 +1,42 @@
-1. ip£º192.168.100.210
-2. root£ºroot1003
-3. °ü·ÅÖÃµØÖ·£º/opt/package
-4. Èí¼ş°²×°µØÖ·£º /usr/setup
-5. °²×°jdk1.8.0_111
-- ½âÑ¹ 
+1. ipï¼š192.168.100.210
+2. rootï¼šroot1003
+3. åŒ…æ”¾ç½®åœ°å€ï¼š/opt/package
+4. è½¯ä»¶å®‰è£…åœ°å€ï¼š /usr/setup
+5. å®‰è£…jdk1.8.0_111
+- è§£å‹
 	tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup
-- ÉèÖÃ»·¾³±äÁ¿
-	vi /etc/profile Ìí¼ÓÒÔÏÂÄÚÈİ£º
+- è®¾ç½®ç¯å¢ƒå˜é‡
+	vi /etc/profile æ·»åŠ ä»¥ä¸‹å†…å®¹ï¼š
 	export JAVA_HOME=/usr/setup/jdk1.8.0_111
 	export JRE_HOME=$JAVA_HOME/jre
 	export CLASSPATH=./:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
 	export PATH=$PATH:$JAVA_HOME/bin
 
-- Ê¹»·¾³±äÁ¿ÉúĞ§
+- ä½¿ç¯å¢ƒå˜é‡ç”Ÿæ•ˆ
 	source /etc/profile
 
-- ÖØÆô
+- é‡å¯
 	reboot
 
-6. °²×°Tomcat8.5 
-- ½âÑ¹ÎÄ¼ş
+6. å®‰è£…Tomcat8.5
+- è§£å‹æ–‡ä»¶
 	$ tar zxf apache-tomcat-8.5.32.tar.gz -C /usr/setup/
 
-- ´´½¨ÓÃ»§£¬²¢½«homeÄ¿Â¼·ÅÖÃµ½°²×°Ä¿Â¼ÏÂÃæ
+- åˆ›å»ºç”¨æˆ·ï¼Œå¹¶å°†homeç›®å½•æ”¾ç½®åˆ°å®‰è£…ç›®å½•ä¸‹é¢
 	useradd -m -U -d /usr/setup/apache-tomcat-8.5.32 -s /bin/false tomcat
 
-- ´´½¨¿ì½İ·½Ê½
+- åˆ›å»ºå¿«æ·æ–¹å¼
 	ln -s /usr/setup/apache-tomcat-* /usr/setup/latestTomcat
 
-- ¸Ä±äÎÄ¼şËùÊô×éºÍÓÃ»§ÎªTomcat
+- æ”¹å˜æ–‡ä»¶æ‰€å±ç»„å’Œç”¨æˆ·ä¸ºTomcat
 	chown -R tomcat: /usr/setup/apache-tomcat-*
 	chown -R tomcat: /usr/setup/latestTomcat
 
-- ¿ÉÖ´ĞĞ×´Ì¬
+- å¯æ‰§è¡ŒçŠ¶æ€
 	chmod +x /usr/setup/latestTomcat/bin/*.sh
 
-- ´´½¨/etc/systemd/system/tomcat.serviceÎÄ¼ş	
-	```Ìí¼ÓÒÔÏÂÄÚÈİ
+- åˆ›å»º/etc/systemd/system/tomcat.serviceæ–‡ä»¶
+	```æ·»åŠ ä»¥ä¸‹å†…å®¹
 	[Unit]
 	Description=Tomcat 8.5 servlet container
 	After=network.target
@@ -60,29 +60,29 @@
 	WantedBy=multi-user.target
 	```
 
-- ÈÃ´´½¨µÄ·şÎñÉúĞ§£¬È»ºóÆô¶¯Tomcat
+- è®©åˆ›å»ºçš„æœåŠ¡ç”Ÿæ•ˆï¼Œç„¶åå¯åŠ¨Tomcat
 	systemctl daemon-reload
 	systemctl start tomcat
 	systemctl status tomcat
 
-- ¼ÓÈë automatically started at boot time
+- åŠ å…¥ automatically started at boot time
 	systemctl enable tomcat
 
-- ¿ª·Å¶Ë¿Ú
+- å¼€æ”¾ç«¯å£
 	firewall-cmd --zone=public --permanent --add-port=8080/tcp
 	firewall-cmd --zone=public --permanent --add-port=8005/tcp
 	firewall-cmd --zone=public --permanent --add-port=8009/tcp
 	firewall-cmd --reload
 
-- ĞŞ¸ÄÅäÖÃÎÄ¼ş
+- ä¿®æ”¹é…ç½®æ–‡ä»¶
 	a. vi /usr/setup/latestTomcat/conf/tomcat-users.xml
-	```Ìí¼ÓÒÔÏÂÄÚÈİ
-	<role rolename="manager-script"/>	
+	```æ·»åŠ ä»¥ä¸‹å†…å®¹
+	<role rolename="manager-script"/>
 	<user username="tomcat" password="tomcat" roles="manager-script"/>
 	```
 	b. vi /usr/setup/latestTomcat/webapps/manager/META-INF/context.xml
 <Context antiResourceLocking="false" privileged="true" >
-	<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> --> °ÑÕâÒ»ĞĞ×¢ÊÍµô
+	<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> --> æŠŠè¿™ä¸€è¡Œæ³¨é‡Šæ‰
 	<Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
 </Context>
 
@@ -90,154 +90,154 @@
 
 ```
 
-1. ²Î¿¼£º https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-tomcat8.md
-2. TomcatÆô¶¯ÂıµÄ½â¾ö°ì·¨
-µÚÒ»ÖÖ :
-Í¨¹ıĞŞ¸ÄTomcatÆô¶¯ÎÄ¼ş -Djava.security.egd=file:/dev/urandom Í¨¹ıĞŞ¸ÄJREÖĞµÄjava.securityÎÄ¼ş securerandom.source=file:/dev/urandom
+1. å‚è€ƒï¼š https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-tomcat8.md
+2. Tomcatå¯åŠ¨æ…¢çš„è§£å†³åŠæ³•
+ç¬¬ä¸€ç§ :
+é€šè¿‡ä¿®æ”¹Tomcatå¯åŠ¨æ–‡ä»¶ -Djava.security.egd=file:/dev/urandom é€šè¿‡ä¿®æ”¹JREä¸­çš„java.securityæ–‡ä»¶ securerandom.source=file:/dev/urandom
 
-µÚ¶şÖÖ(ÍÆ¼ö):
+ç¬¬äºŒç§(æ¨è):
 yum -y install rng-tools
-##Æô¶¯ìØ·şÎñ
+##å¯åŠ¨ç†µæœåŠ¡
 systemctl start rngd
 systemctl restart rngd
 
 ```
-7. °²×°redis4.0.6¡¾Ã»ÓĞÉèÖÃ×ÔÆô¶¯¡¿
-- ¼ì²é±àÒë¹¤¾ßÊÇ·ñ°²×°
+7. å®‰è£…redis4.0.6ã€æ²¡æœ‰è®¾ç½®è‡ªå¯åŠ¨ã€‘
+- æ£€æŸ¥ç¼–è¯‘å·¥å…·æ˜¯å¦å®‰è£…
 	rpm -qa | grep gcc-c++
-	Èç¹ûÃ»ÓĞ°²×°£¬Ö´ĞĞ£º yum -y install gcc-c++
-- ½âÑ¹
+	å¦‚æœæ²¡æœ‰å®‰è£…ï¼Œæ‰§è¡Œï¼š yum -y install gcc-c++
+- è§£å‹
 	tar zxf redis-4.0.6.tar.gz
-- ½øÈë°²×°Ä¿Â¼£¬²¢½øĞĞ±àÒë
+- è¿›å…¥å®‰è£…ç›®å½•ï¼Œå¹¶è¿›è¡Œç¼–è¯‘
 	make
-- ´´½¨°²×°Ä¿Â¼
+- åˆ›å»ºå®‰è£…ç›®å½•
 	mkdir /usr/setup/redis4.0.6_singleton
-- °²×°
+- å®‰è£…
 	make install PREFIX=/usr/setup/redis4.0.6_singleton
-- ²âÊÔ
-	- ½øÈë°²×°Ä¿Â¼£¬Æô¶¯·şÎñ¶Ë
+- æµ‹è¯•
+	- è¿›å…¥å®‰è£…ç›®å½•ï¼Œå¯åŠ¨æœåŠ¡ç«¯
 		cd /usr/setup/redis4.0.6_singleton/bin
 		./redis-server
-	- ¿ªÆôÁíÒ»¸öÖÕ¶Ë£¬½øÈë°²×°Ä¿Â¼£¬Æô¶¯¿Í»§¶Ë
+	- å¼€å¯å¦ä¸€ä¸ªç»ˆç«¯ï¼Œè¿›å…¥å®‰è£…ç›®å½•ï¼Œå¯åŠ¨å®¢æˆ·ç«¯
 		cd /usr/setup/redis4.0.6_singleton/bin
 		./redis-cli
 
 ```
-1. ²Î¿¼: https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-redis-cluster.md
-2. »ù±¾ÃüÁî
+1. å‚è€ƒ: https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-redis-cluster.md
+2. åŸºæœ¬å‘½ä»¤
 ping
 set a 123
 get a
 quit
 ```
 
-8. °²×°MySQL5.7
-- ¼ì²é°²×°»·¾³
+8. å®‰è£…MySQL5.7
+- æ£€æŸ¥å®‰è£…ç¯å¢ƒ
 	rpm -qa|grep mariadb
-	rpm -e mariadb-libs-* --nodeps 
+	rpm -e mariadb-libs-* --nodeps
 	rpm -qa|grep mariadb
-- ½âÑ¹
+- è§£å‹
 	tar xvf mysql-5.7.16-1.el7.x86_64.rpm-bundle.tar
-	mkdir mysql5.7.16 
+	mkdir mysql5.7.16
 	mv mysql-community-* ./mysql5.7.16/
 
-- °²×°
-	rpm -ivh mysql-community-common-5.7.16-1.el7.x86_64.rpm 
-	rpm -ivh mysql-community-libs-5.7.16-1.el7.x86_64.rpm  
-	rpm -ivh mysql-community-client-5.7.16-1.el7.x86_64.rpm 
-	rpm -ivh mysql-community-server-5.7.16-1.el7.x86_64.rpm  
+- å®‰è£…
+	rpm -ivh mysql-community-common-5.7.16-1.el7.x86_64.rpm
+	rpm -ivh mysql-community-libs-5.7.16-1.el7.x86_64.rpm
+	rpm -ivh mysql-community-client-5.7.16-1.el7.x86_64.rpm
+	rpm -ivh mysql-community-server-5.7.16-1.el7.x86_64.rpm
 
-- ³õÊ¼»¯
+- åˆå§‹åŒ–
 	mysqld --initialize --user=mysql
-	cat /var/log/mysqld.log   
-	systemctl status mysqld  
+	cat /var/log/mysqld.log
+	systemctl status mysqld
 	systemctl start mysqld
 	systemctl status mysqld
 
-- ·ÖÅäÈ¨ÏŞ
+- åˆ†é…æƒé™
 	mysql -uroot -p
 	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root1003@study&*(';
 
 	grant all on *.* to 'root'@'%' identified by 'root1003@study&*(';
 	flush privileges;
 
-- ¿ª·Å¶Ë¿Ú
+- å¼€æ”¾ç«¯å£
 	firewall-cmd --zone=public --add-port=3306/tcp --permanent
 	firewall-cmd --reload
 ```
-²Î¿¼£º
+å‚è€ƒï¼š
 https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-mysql.md
 ```
 
-9. °²×°git¡¢jekyll
-- ²é¿´yum¿âÖĞµÄ°æ±¾£º
+9. å®‰è£…gitã€jekyll
+- æŸ¥çœ‹yumåº“ä¸­çš„ç‰ˆæœ¬ï¼š
 	yum info git
-- ²é¿´ÊÇ·ñ°²×°
+- æŸ¥çœ‹æ˜¯å¦å®‰è£…
 	git --version
-- °²×°ÒÀÀµ°ü
+- å®‰è£…ä¾èµ–åŒ…
 	yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
-- ²é¿´ÊÇ·ñ°²×°
+- æŸ¥çœ‹æ˜¯å¦å®‰è£…
 	git --version
-- Ğ¶ÔØ¾É°æ±¾
+- å¸è½½æ—§ç‰ˆæœ¬
 	yum remove git
-- ÏÂÔØ https://github.com/git/git/releases
-- ÉÏ´«µ½ÖÆ¶¨Ä¿Â¼
-- ½âÑ¹
+- ä¸‹è½½ https://github.com/git/git/releases
+- ä¸Šä¼ åˆ°åˆ¶å®šç›®å½•
+- è§£å‹
 	tar zxf git-2.18.0.tar.gz
-- °²×°
+- å®‰è£…
 	make prefix=/usr/setup/git_2.18.0 all
 	make prefix=/usr/setup/git_2.18.0 install
-- ÅäÖÃ»·¾³±äÁ¿
+- é…ç½®ç¯å¢ƒå˜é‡
 	vi /etc/profile
 	export GIT_HOME=/usr/setup/git_2.18.0
 	export PATH=$PATH:$GIT_HOME/bin
 	source /etc/profile
-- ²é¿´ÊÇ·ñ°²×°
+- æŸ¥çœ‹æ˜¯å¦å®‰è£…
 	git --version
-- ÅäÖÃ
+- é…ç½®
 	git config --global user.name "zeanzai"
 	git config --global user.email "438123371@qq.com"
 
------------ °²×°jekyll
-- ¼ì²érubyÊÇ·ñ°²×°
+----------- å®‰è£…jekyll
+- æ£€æŸ¥rubyæ˜¯å¦å®‰è£…
 	ruby -v
-- ¸üĞÂ°²×°Ô´
-	yum -y update 
-- °²×°RVM
-	gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB 
-	curl -sSL https://get.rvm.io | bash -s stable // ´Ë²½ÖèÊ±¼äÓĞµã³¤
+- æ›´æ–°å®‰è£…æº
+	yum -y update
+- å®‰è£…RVM
+	gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+	curl -sSL https://get.rvm.io | bash -s stable // æ­¤æ­¥éª¤æ—¶é—´æœ‰ç‚¹é•¿
 	source /etc/profile.d/rvm.sh
 	rvm -v
-		Êä³ö£ºrvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
-- °²×°×îĞÂµÄÎÈ¶¨°æ±¾
-	rvm install ruby // ´Ë²½ÖèÊ±¼äÓĞµã³¤
-- ²âÊÔÊÇ·ñ°²×°
+		è¾“å‡ºï¼šrvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+- å®‰è£…æœ€æ–°çš„ç¨³å®šç‰ˆæœ¬
+	rvm install ruby // æ­¤æ­¥éª¤æ—¶é—´æœ‰ç‚¹é•¿
+- æµ‹è¯•æ˜¯å¦å®‰è£…
 	ruby -v
-		Êä³ö£ºruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+		è¾“å‡ºï¼šruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
 	gem -v
-		Êä³ö£º2.7.7
+		è¾“å‡ºï¼š2.7.7
 
-- °²×°jekyllºÍbundle
+- å®‰è£…jekyllå’Œbundle
 	gem install jekyll bundle jekyll-paginate
-- ²âÊÔjekyllÊÇ·ñ°²×°
+- æµ‹è¯•jekyllæ˜¯å¦å®‰è£…
 	bundle -v
-		Êä³ö£º Bundler version 1.16.2
+		è¾“å‡ºï¼š Bundler version 1.16.2
 	jekyll -v
-		Êä³ö£º jekyll 3.8.3
-- ´´½¨Ä¿Â¼
+		è¾“å‡ºï¼š jekyll 3.8.3
+- åˆ›å»ºç›®å½•
 	mkdir /home/resource/open
-- ¿ËÂ¡ÏîÄ¿
+- å…‹éš†é¡¹ç›®
 	git clone https://github.com/zeanzai/zeanzai.github.io.git
-- ÅäÖÃNginx
-	
-- ´´½¨½Å±¾
+- é…ç½®Nginx
+
+- åˆ›å»ºè„šæœ¬
 mkdir /opt/script
 cd /opt/script
 vi jekyll.sh
 #!/bin/sh
 . /etc/profile
 . ~/.bash_profile
-echo 'start-----------------------------------------------' 
+echo 'start-----------------------------------------------'
 date "+%Y-%m-%d %H:%M:%S"
 
 echo 'open the dir...'
@@ -256,17 +256,17 @@ echo 'end -----------------------------------------------'
 
 chmod +x jekyll.sh
 
-- ²é¿´¶¨Ê±Æ÷ÊÇ·ñÆô¶¯
+- æŸ¥çœ‹å®šæ—¶å™¨æ˜¯å¦å¯åŠ¨
 systemctl status crond
 
-- ²é¿´¶¨Ê±Æ÷ÊÇ·ñ¿ª»ú×ÔÆô
+- æŸ¥çœ‹å®šæ—¶å™¨æ˜¯å¦å¼€æœºè‡ªå¯
 systemctl is-enabled crond
 
-- ÉèÖÃ¶¨Ê±Æ÷
+- è®¾ç½®å®šæ—¶å™¨
 crontab -e
 40 12 * * * /bin/sh /opt/script/jekyll.sh >> /home/jekyll.log 2>&1
 
-- ²é¿´Ö´ĞĞÈÕÖ¾
+- æŸ¥çœ‹æ‰§è¡Œæ—¥å¿—
 tail -f /var/log/cron
 
 
@@ -286,7 +286,3 @@ date "+%Y-%m-%d %H:%M:%S"
 /root/bin
 
 source /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/environment
-
-
-
-
