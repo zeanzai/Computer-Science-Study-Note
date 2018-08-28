@@ -24,6 +24,10 @@
 
 #### 其他
 - [Json格式化工具]([https://www.json.cn/)
+- [Timeline](https://time.graphics/)
+- [Carbon](https://carbon.now.sh)
+- [gogs](https://github.com/gogs/gogs)
+-
 
 ---
 ## 资讯类
@@ -33,6 +37,8 @@
   - [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)
   - [掘金](https://juejin.im)
   - [博客园](https://www.cnblogs.com/)
+  - https://blog.mynook.info/
+  - https://github.com/rujews/maupassant-hugo/blob/master/README_Zh.md
 - 英文类
   - [Hacker News](https://news.ycombinator.com/news)
   - [GitHub](https://github.com/)
@@ -49,3 +55,5 @@
 - [网易公开课](https://open.163.com/)
 - [LeeCode](https://leetcode.com/)
 - [牛客网](https://www.nowcoder.com/)
+- [DeepLearningBook](http://www.deeplearningbook.org/)
+- [结构之法 算法之道](https://blog.csdn.net/v_july_v)
