@@ -57,3 +57,7 @@
 - [牛客网](https://www.nowcoder.com/)
 - [DeepLearningBook](http://www.deeplearningbook.org/)
 - [结构之法 算法之道](https://blog.csdn.net/v_july_v)
+
+
+---
+- [腾讯自媒体分享计划](https://cloud.tencent.com/developer/support-plan)
