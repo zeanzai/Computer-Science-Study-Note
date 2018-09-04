@@ -11,3 +11,15 @@ http://www.gohugo.org/post/
 
 主题网站
 https://github.com/zeanzai/Mainroad
+
+idea:
+关于hugo博客：
+  1. 添加容灾，http://www.gohugo.org/post/coderzh-automated-deploy-hugo/
+  2. 添加访客记录 http://flagcounter.com/
+  3. 添加评论
+  4. 迁移内容
+
+关于博客园：
+  1. 更换主题
+  2. 修改界面布局
+  3. 
