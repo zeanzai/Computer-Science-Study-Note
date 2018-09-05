@@ -47,7 +47,7 @@ $ ./configure --prefix=/usr/setup/nginx_1.12.2 \
 --http-scgi-temp-path=/usr/setup/nginx_1.12.2/temp/scgi \
 --with-http_stub_status_module \
 --with-http_gzip_static_module \
---with-http_ssl_module 
+--with-http_ssl_module
 
 ......
 Configuration summary
@@ -68,7 +68,7 @@ Configuration summary
   nginx http fastcgi temporary files: "/usr/setup/nginx_1.12.2/temp/fastcgi"
   nginx http uwsgi temporary files: "/usr/setup/nginx_1.12.2/temp/uwsgi"
   nginx http scgi temporary files: "/usr/setup/nginx_1.12.2/temp/scgi"
-  
+
 $ make
 $ make install
 ```
@@ -144,25 +144,8 @@ $ systemctl restart nginx.service
   解决方案：
 
    	1. 检查系统进程，是否开启了Nginx
-  		2. 检查安全组 -> 检查端口开放情况
+  	2. 检查安全组 -> 检查端口开放情况
 
 - 运行`systemctl enable nginx.service  `出现`Failed to execute operation: Bad message`错误
 
   解决方案：检查创建的服务文件是否正确书写。
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
