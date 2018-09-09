@@ -35,8 +35,8 @@
 ```
 ---
 file:		install-nginx.md
-datetime:	20180621 16:43 
-operator:	zeanzai 
+datetime:	20180621 16:43
+operator:	zeanzai
 operation:	install nginx
 ---
 # install nginx
@@ -95,6 +95,3 @@ server {
 }
 # end -->
 ```
-
-
-
