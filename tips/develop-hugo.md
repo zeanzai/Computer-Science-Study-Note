@@ -365,7 +365,7 @@ echo "${time1} start ... " >> /opt/scripts/hugo-deploy/redeploy.log &&
 
 # 2. 拉取GitHub的article
 cd /home/project/hugoblog/zeanzaiblogarticle &&
-git pull origin master
+git pull origin master &&
 time2=`date "+%Y-%m-%d %H:%M:%S"` &&
 echo "${time2} git pull article " >> /opt/scripts/hugo-deploy/redeploy.log &&
 
@@ -398,7 +398,7 @@ time7=`date "+%Y-%m-%d %H:%M:%S"` &&
 echo "${time7} git push io " >> /opt/scripts/hugo-deploy/redeploy.log &&
 
 # 8. 结束
-time8=`date "+%Y-%m-%d %H:%M:%S"`
+time8=`date "+%Y-%m-%d %H:%M:%S"` &&
 echo "${time8} ... end " >> /opt/scripts/hugo-deploy/redeploy.log &&
 echo "" >> /opt/scripts/hugo-deploy/redeploy.log
 
