@@ -20,7 +20,17 @@
 - Adblock Plus
   广告拦截插件
 
+- GoogleTranslate
+  谷歌翻译插件
+
+- SwitchyOmega
+  科学上网插件
+
+- Save Screenshot
+  网页截图工具,可以保存成多种格式
+
 #### Atom插件
+
 
 #### 其他
 - [Json格式化工具]([https://www.json.cn/)
@@ -57,7 +67,8 @@
 - [牛客网](https://www.nowcoder.com/)
 - [DeepLearningBook](http://www.deeplearningbook.org/)
 - [结构之法 算法之道](https://blog.csdn.net/v_july_v)
-
+- [Git简明教程](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 ---
+
 - [腾讯自媒体分享计划](https://cloud.tencent.com/developer/support-plan)
