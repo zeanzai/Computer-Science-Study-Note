@@ -22,4 +22,7 @@ idea:
 关于博客园：
   1. 更换主题
   2. 修改界面布局
-  3. 
+  3.
+
+https://www.watelab.com/what-is-open-graph-tags/
+http://smo.knowem.com/
