@@ -1,70 +1,89 @@
-# Computer-Science-Study-Note
-计算机科学的读书笔记、软件项目实践过程、问题记录、知识分享
 
-## 读书笔记
+<center>
 
-### 《计算机网络（第7版）-谢希仁》
+![](extra/logo.png)
 
-- [chapter01 概述](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter01-overview.markdown)
-- [chapter02 物理层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter02-physical-layer.markdown)
-- [chapter03 数据链路层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter03-data-link-layer.markdown)
-- [chapter04 网络层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter04-network-layer.markdown)
-- [chapter05 运输层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter05-transport-layer.markdown)
-- [chapter06 应用层](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter06-application-layer.markdown)
-- [chapter07 网络安全](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter07-network-security.markdown)
-- [chapter08 互联网上的音频/视频服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter08-vedio.markdown)
-- [chapter09 无线网络和移动网络](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/computer-network/chapter09-wifi-wireless.markdown)
+</center>
+
+## 计算机科学学习笔记
+
+工作多年之后才意识到大学本科阶段学习的那些基础课程的重要性。于是，笔者决定利用自己工作之余的时间，再重新学习一下大学本科阶段学习的基础课程。当然，数学、政治及英语类的课程除外，即本学习内容只包含了和计算机有关的课程内容。
+
+当然，本文档也可以作为java程序员面试时需要恶补的知识点合集。除此之外，本仓库也可以作为非CS专业的计算机课程资料。
 
 
-## 《Linux就该这么学（第一版）-刘遄》
+## 概述
 
-- [chapter01 部署虚拟环境安装Linux系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter01.markdown)
-- [chapter02 新手必须掌握的Linux命令](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter02.markdown)
-- [chapter03 管道符、重定向与环境变量](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter03.markdown)
-- [chapter04 vim编辑器与shell命令脚本](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter04.markdown)
-- [chapter05 用户身份与文件权限](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter05.markdown)
-- [chapter06 存储结构与磁盘划分](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter06.markdown)
-- [chapter07 使用RAID与LVM磁盘阵列技术](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter07.markdown)
-- [chapter08 iptables与firewalld防火墙](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter08.markdown)
-- [chapter09 使用ssh服务管理远程主机](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter09.markdown)
-- [chapter10 使用Apache服务部署静态网站](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter10.markdown)
-- [chapter11 使用vsftpd服务传输文件](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter11.markdown)
-- [chapter12 使用Samba或NFS实现文件共享](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter12.markdown)
-- [chapter13 使用BIND提供域名解析服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter13.markdown)
-- [chapter14 使用DHCP动态管理主机地址](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter14.markdown)
-- [chapter15 使用Postfix与Dovecot部署邮件系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter15.markdown)
-- [chapter16 使用Squid部署代理缓存服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter16.markdown)
-- [chapter17 使用iSCSI服务部署网络存储](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter17.markdown)
-- [chapter18 使用MariaDB数据库管理系统](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter18.markdown)
-- [chapter19 使用PXE+KIC和start无人值守安装服务](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter19.markdown)
-- [chapter20 使用LNMP架构部署动态网站环境](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/linux-probe/chapter20.markdown)
+本仓库是以课程为单位的文件夹构成。每门课程都附带了一些教学资源，这些资源包括视频材料（文档中有连接）、文档材料（在每门课程的文件夹内）以及笔者的笔记。
 
+每个文件夹中都有以下内容：
 
+- readme.md ：用来写本门课程的主要概况以及学习资料等。
+- image ：用来存放本门课程中重要的图片。
+- material ： 用来存放本门课程中的学习资料等。
 
-## 运维
-
-- [运维习惯](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/README.md)
-- [centos7上安装Nginx1.12并配置HTTPS](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-nginx-and-config-https.md)
-- [centos7上安装图片服务器（vsftp+nginx）](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-image-sever.md)
-- [centos7上分配管理员账户](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-new-users.md)
-- [Centos7上面安装gitlab并简单实用](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-gitlab.md)
+```
+..
+│  overview.md
+│  readme.md
+│
+├─image
+│      01-01.png
+│      01-02.png
+│
+└─material
+        算法图解.pdf
+```
 
 
+## 课程列表
 
-# 其他
+### 计算机网络
 
-- [前后端分离项目中的验证码问题](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/other/auth-forend-backend.md)
-- [SpringBoot启动和Tomcat部署出现的问题](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/other/springboot-tomcat-start-error.md)
-- [一个著名的日志系统是怎么设计出来的](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/other/how-to-log.md)
-- [jekyll安装及配置](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/other/jekyll-install-turial.md)
-- [jwt简介](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/jwt.md)
-- [软件项目管理中的版本号](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/version-control.md)
-- [logback日志详解](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/logback.md)
-- [数据库ACID介绍](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/ACID.md)
-- [SpringBoot连接oracle](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/springboot-connect-oracle.md)
-- [安装oraclejdk](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/install-oracle-jdk.md)
-- [删除openjdk](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/delete-openjdk.md)
-- [安装mysql](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-mysql.md)
-- [安装redis集群](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/centos7-redis-cluster.md)
-- [Centos7服务并开机自启](https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/Centos7-services-autorun.md)
+- [x] [chapter01 概述](docs/computer-network/chapter01-overview.md)
+- [x] [chapter02 物理层](docs/computer-network/chapter02-physical-layer.md)
+- [x] [chapter03 数据链路层](docs/computer-network/chapter03-data-link-layer.md)
+- [ ] [chapter04 网络层](docs/computer-network/chapter04-network-layer.md)
+- [ ] [chapter05 运输层](docs/computer-network/chapter05-transport-layer.md)
+- [ ] [chapter06 应用层](docs/computer-network/chapter06-application-layer.md)
+- [ ] [chapter07 网络安全](docs/computer-network/chapter07-network-security.md)
+- [ ] [chapter08 互联网上的音频/视频服务](docs/computer-network/chapter08-vedio.md)
+- [ ] [chapter09 无线网络和移动网络](docs/computer-network/chapter09-wifi-wireless.md)
 
+### test
+- [x] [数据结构与算法基础-java版](docs/algorithm/overview.md)
+- [x] [mysql高级](docs/mysql/00.readme.md)
+- [ ] [设计模式]()
+- [ ] [nginx]
+
+
+
+## 其他项目
+
+<div align="center" style="border: solid red 1px;"><br />
+  <a href="https://github.com/zeanzai/Java-Linux" target="_blank">java-linux</a><br />
+
+  ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Java-Linux?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Java-Linux?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Java-Linux?style=plastic)
+
+  Java程序员的必备Linux运维技能，包括各种服务器软件的安装和运维等基本运维参考文档。
+
+  <a href="https://zeanzai.me/Java-Linux/" target="_blank">快捷访问入口</a>
+</div>
+<br />
+<div align="center" style="border: solid red 1px;"><br />
+  <a href="https://github.com/zeanzai/java-interview-questions" target="_blank">java-interview-questions</a><br />
+
+  ![GitHub stars](https://img.shields.io/github/stars/zeanzai/java-interview-questions?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/java-interview-questions?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/java-interview-questions?style=plastic)
+
+  😃 本仓库是笔者在2019年跳槽找工作时收集的面试问题，内容丰富、涉及面广，面向初级、中高级几乎所有阶段的java程序员，希望能帮助大家快速准备java面试。
+
+  <a href="https://zeanzai.me/java-interview-questions/" target="_blank">快捷访问入口</a>
+</div>
+
+## 说明
+
+本文档基于[docsify](https://docsify.js.org/#/zh-cn/)创建，部署在GitHub Page上面。
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
