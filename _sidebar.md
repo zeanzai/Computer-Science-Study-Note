@@ -30,3 +30,5 @@
   - [使用gitlab](docs/git/01.use-gitlab.md)
 - nginx
   - [centos7.5上安装nginx](docs/nginx/00.centos7.5-install-nginx1.14.md)
+- redis
+  - [redis3.0学习笔记](docs/redis/redis3.0-study-note.md)
