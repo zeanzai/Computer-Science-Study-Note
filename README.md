@@ -6,7 +6,9 @@
 </center>
 
 <center>
+
 ![GitHub followers](https://img.shields.io/github/followers/zeanzai?style=plastic) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/zeanzai/Computer-Science-Study-Note/pulls) ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Computer-Science-Study-Note?style=plastic)
+
 </center>
 
 ## 计算机科学学习笔记
