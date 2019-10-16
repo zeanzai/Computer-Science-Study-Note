@@ -5,6 +5,10 @@
 
 </center>
 
+<center>
+![GitHub followers](https://img.shields.io/github/followers/zeanzai?style=plastic) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/zeanzai/Computer-Science-Study-Note/pulls) ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Computer-Science-Study-Note?style=plastic)
+</center>
+
 ## 计算机科学学习笔记
 
 工作多年之后才意识到大学本科阶段学习的那些基础课程的重要性。于是，笔者决定利用自己工作之余的时间，再重新学习一下大学本科阶段学习的基础课程。当然，数学、政治及英语类的课程除外，即本学习内容只包含了和计算机有关的课程内容。
@@ -35,37 +39,22 @@
         算法图解.pdf
 ```
 
+## 欢迎
 
-## 课程列表
+欢迎吐槽，也欢迎各种形式的PR和Issue。
 
-### 计算机网络
+## 其他
 
-- [x] [chapter01 概述](docs/computer-network/chapter01-overview.md)
-- [x] [chapter02 物理层](docs/computer-network/chapter02-physical-layer.md)
-- [x] [chapter03 数据链路层](docs/computer-network/chapter03-data-link-layer.md)
-- [ ] [chapter04 网络层](docs/computer-network/chapter04-network-layer.md)
-- [ ] [chapter05 运输层](docs/computer-network/chapter05-transport-layer.md)
-- [ ] [chapter06 应用层](docs/computer-network/chapter06-application-layer.md)
-- [ ] [chapter07 网络安全](docs/computer-network/chapter07-network-security.md)
-- [ ] [chapter08 互联网上的音频/视频服务](docs/computer-network/chapter08-vedio.md)
-- [ ] [chapter09 无线网络和移动网络](docs/computer-network/chapter09-wifi-wireless.md)
-
-### test
-- [x] [数据结构与算法基础-java版](docs/algorithm/overview.md)
-- [x] [mysql高级](docs/mysql/00.readme.md)
-- [ ] [设计模式]()
-- [ ] [nginx]
-
-
+- [我的个人博客](https://zeanzai.me)
 
 ## 其他项目
 
 <div align="center" style="border: solid red 1px;"><br />
-  <a href="https://github.com/zeanzai/Java-Linux" target="_blank">java-linux</a><br />
+  <a href="https://github.com/zeanzai/Java-Linux" target="_blank">Java-Linux</a><br />
 
   ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Java-Linux?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Java-Linux?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Java-Linux?style=plastic)
 
-  Java程序员的必备Linux运维技能，包括各种服务器软件的安装和运维等基本运维参考文档。
+  🐉 Java程序员的必备Linux运维技能，包括各种服务器软件的安装和运维等基本运维参考文档。
 
   <a href="https://zeanzai.me/Java-Linux/" target="_blank">快捷访问入口</a>
 </div>
