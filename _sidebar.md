@@ -1,6 +1,13 @@
 
-- dsa
+- 数据结构与算法
   - [readme](dsa/readme.md)
+- java JUC
+  - [readme](docs/juc/01.readme.md)
+- mysql高级
+  - [准备](docs/mysql/00.readme.md)
+  - [架构介绍](docs/mysql/01.chapter01.md)
+  - [索引优化分析](docs/mysql/02.chapter02.md)
+  - [往数据库插入百万条数据](docs/ysql/00.insert-into-million.md)
 - 计算机网络
   - [学习资料](docs/network/readme.md)
   - [chapter01 概述](docs/network/chapter01-overview.md)
@@ -16,19 +23,5 @@
   - [前言](docs/os/00.readme.md)
   - [操作系统概述](docs/os/chapter01.md)
   - [启动、中断、异常和系统调用](docs/os/chapter02.md)
-- mysql
-  - [前言](docs/mysql/00.readme.md)
-  - [虚拟机上安装centos7.5](docs/mysql/00.centos7.5-install-tutorial.md)
-  - [centos7.5上安装mysql5.7](docs/mysql/00.centos7-install-mysql5.7.md)
-  - [mysql5.7配置文件详解](docs/mysql/00.mysql5.7-config-file.md)
-  - [架构介绍](docs/mysql/01.chapter01.md)
-  - [索引优化分析](docs/mysql/02.chapter02.md)
-  - [往数据库插入百万条数据](docs/ysql/00.insert-into-million.md)
-- gitlab
-  - [centos7.5上安装gitlab](docs/git/00.centos7.5-install-gitlab.md)
-  - [安装postfix](docs/git/00.centos7.5-install-postfix.md)
-  - [使用gitlab](docs/git/01.use-gitlab.md)
-- nginx
-  - [centos7.5上安装nginx](docs/nginx/00.centos7.5-install-nginx1.14.md)
 - redis
-  - [redis3.0学习笔记](docs/redis/redis3.0-study-note.md)
+  - [前言](docs/redis/readme.md)
